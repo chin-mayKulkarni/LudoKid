@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ludo Kid</string>
+    <string name="roll_dice">Roll Dice</string>
+    <string name="got_it">Got it!</string>
+    <string name="play_again">Play Again</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="correct_answer">Correct! Pawn eliminated!</string>
+    <string name="wrong_answer">Wrong! Opponent\'s pawn is safe!</string>
+</resources>

@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "category": "Science",
+        "emoji": "🔬",
+        "fact": "The human body has about 37 trillion cells. Each cell contains DNA that, if stretched out, would be about 2 meters long!",
+        "question": "Approximately how many cells does the human body have?",
+        "options": [
+            "37 million",
+            "37 billion",
+            "37 trillion",
+            "37 thousand"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 2,
+        "category": "Space",
+        "emoji": "🚀",
+        "fact": "Light from the Sun takes approximately 8 minutes and 20 seconds to reach Earth. The Sun is about 150 million km away!",
+        "question": "How long does light from the Sun take to reach Earth?",
+        "options": [
+            "2 minutes",
+            "8 minutes 20 seconds",
+            "15 minutes",
+            "1 hour"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 3,
+        "category": "Animals",
+        "emoji": "🐘",
+        "fact": "Elephants are the only animals that can't jump. They are also the only mammals with 4 knees!",
+        "question": "Which unique distinction do elephants have among large animals?",
+        "options": [
+            "Can't swim",
+            "Can't run",
+            "Can't jump",
+            "Can't sleep standing"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 4,
+        "category": "Geography",
+        "emoji": "🌍",
+        "fact": "Russia is so large that it spans 11 time zones! It's the largest country in the world by area, covering about 17 million square km.",
+        "question": "How many time zones does Russia span?",
+        "options": [
+            "7",
+            "9",
+            "11",
+            "13"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 5,
+        "category": "History",
+        "emoji": "🏛️",
+        "fact": "The Great Wall of China is NOT visible from space with the naked eye — this is a common myth. It's only about 9 meters wide at most.",
+        "question": "What is commonly believed but FALSE about the Great Wall of China?",
+        "options": [
+            "It's made of stone",
+            "It's visible from space",
+            "It was built in stages",
+            "It runs through mountains"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 6,
+        "category": "Science",
+        "emoji": "⚡",
+        "fact": "Lightning strikes Earth about 100 times every single second! That's about 8.6 million lightning strikes per day.",
+        "question": "How many times does lightning strike Earth per second?",
+        "options": [
+            "10 times",
+            "50 times",
+            "100 times",
+            "1000 times"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 7,
+        "category": "Animals",
+        "emoji": "🐬",
+        "fact": "Dolphins sleep with one eye open! They keep half their brain awake to remember to breathe and watch for danger.",
+        "question": "Why do dolphins sleep with one eye open?",
+        "options": [
+            "To hunt fish",
+            "To remember to breathe",
+            "To communicate",
+            "To stay warm"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 8,
+        "category": "Space",
+        "emoji": "🌙",
+        "fact": "The Moon is slowly drifting away from Earth at a rate of 3.8 cm per year. In about 600 million years, it'll be too far for total solar eclipses.",
+        "question": "How fast is the Moon moving away from Earth?",
+        "options": [
+            "1 cm/year",
+            "3.8 cm/year",
+            "10 cm/year",
+            "1 meter/year"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 9,
+        "category": "Human Body",
+        "emoji": "🧠",
+        "fact": "Your brain generates about 20 watts of power — enough to power a dim light bulb! The brain uses 20% of the body's total energy.",
+        "question": "How much electrical power does the human brain generate?",
+        "options": [
+            "5 watts",
+            "20 watts",
+            "100 watts",
+            "200 watts"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 10,
+        "category": "Nature",
+        "emoji": "🌳",
+        "fact": "Trees communicate with each other through underground fungal networks called mycorrhizae. Scientists call it the 'Wood Wide Web'!",
+        "question": "What do scientists call the underground network trees use to communicate?",
+        "options": [
+            "Green Internet",
+            "Forest Link",
+            "Wood Wide Web",
+            "Root Network"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 11,
+        "category": "Science",
+        "emoji": "💧",
+        "fact": "Hot water can freeze faster than cold water under certain conditions — this is called the Mpemba Effect, named after a student who noticed it in 1963.",
+        "question": "What is the Mpemba Effect?",
+        "options": [
+            "Cold water boils faster",
+            "Hot water freezes faster",
+            "Ice melts slower in salt",
+            "Water expands when frozen"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 12,
+        "category": "Technology",
+        "emoji": "💻",
+        "fact": "The first computer bug was an actual bug! In 1947, Grace Hopper found a moth stuck in a computer relay and taped it into her log book.",
+        "question": "What was the first computer bug?",
+        "options": [
+            "A software error",
+            "A moth in a relay",
+            "A broken transistor",
+            "A loose wire"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 13,
+        "category": "Geography",
+        "emoji": "🏔️",
+        "fact": "Mount Everest grows about 4mm taller each year due to tectonic plate movement. It's currently 8,848.86 meters above sea level.",
+        "question": "By how much does Mount Everest grow each year?",
+        "options": [
+            "1 mm",
+            "4 mm",
+            "10 mm",
+            "1 cm"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 14,
+        "category": "Animals",
+        "emoji": "🦋",
+        "fact": "Butterflies taste with their feet! They have taste sensors on their legs that help them find food and suitable plants to lay eggs.",
+        "question": "How do butterflies taste their food?",
+        "options": [
+            "With their antennae",
+            "With their eyes",
+            "With their feet",
+            "With their tongue"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 15,
+        "category": "Human Body",
+        "emoji": "❤️",
+        "fact": "Your heart beats about 100,000 times a day, pumping about 2,000 gallons (7,570 liters) of blood through your body every 24 hours.",
+        "question": "How many times does the human heart beat per day?",
+        "options": [
+            "10,000",
+            "50,000",
+            "100,000",
+            "500,000"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 16,
+        "category": "History",
+        "emoji": "🗽",
+        "fact": "The Statue of Liberty was a gift from France to the United States in 1886. It was designed by Frédéric Auguste Bartholdi.",
+        "question": "Which country gifted the Statue of Liberty to the USA?",
+        "options": [
+            "Britain",
+            "Germany",
+            "France",
+            "Italy"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 17,
+        "category": "Space",
+        "emoji": "⭐",
+        "fact": "There are more stars in the universe than grains of sand on all of Earth's beaches! The observable universe has about 2 trillion galaxies.",
+        "question": "How many galaxies are in the observable universe?",
+        "options": [
+            "200 million",
+            "1 billion",
+            "2 trillion",
+            "100 trillion"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 18,
+        "category": "Science",
+        "emoji": "🧪",
+        "fact": "Honey never spoils! Archaeologists have found 3,000-year-old honey in Egyptian tombs that was still perfectly edible.",
+        "question": "What makes honey unique among foods?",
+        "options": [
+            "It's the sweetest food",
+            "It never spoils",
+            "It has no calories",
+            "It can cure all diseases"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 19,
+        "category": "Animals",
+        "emoji": "🦈",
+        "fact": "Sharks are older than trees! Sharks have existed for about 450 million years, while the first trees appeared about 350 million years ago.",
+        "question": "Which is older on Earth — sharks or trees?",
+        "options": [
+            "Trees (older by 100M years)",
+            "They appeared together",
+            "Sharks (older by 100M years)",
+            "Trees (older by 10M years)"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 20,
+        "category": "Geography",
+        "emoji": "🌊",
+        "fact": "The Pacific Ocean is larger than all of Earth's land combined! It covers about 165 million square kilometers.",
+        "question": "How does the Pacific Ocean compare to Earth's total land area?",
+        "options": [
+            "It's about half the land area",
+            "It's equal to land area",
+            "It's larger than all land combined",
+            "It's twice Earth's land area"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 21,
+        "category": "Human Body",
+        "emoji": "👁️",
+        "fact": "The human eye can distinguish about 10 million different colors! Your eyes have 3 types of color receptors called cones.",
+        "question": "How many different colors can the human eye detect?",
+        "options": [
+            "1 million",
+            "5 million",
+            "10 million",
+            "100 million"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 22,
+        "category": "Technology",
+        "emoji": "📱",
+        "fact": "The first iPhone was released in 2007. Steve Jobs said it was 'an iPod, a phone, and an internet communicator' — three devices in one.",
+        "question": "In what year was the first iPhone released?",
+        "options": [
+            "2005",
+            "2007",
+            "2009",
+            "2010"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 23,
+        "category": "Science",
+        "emoji": "🌡️",
+        "fact": "Absolute zero (-273.15°C or -459.67°F) is the coldest possible temperature in the universe. At this point, all atomic motion stops.",
+        "question": "What is absolute zero in Celsius?",
+        "options": [
+            "-100°C",
+            "-200°C",
+            "-273.15°C",
+            "-400°C"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 24,
+        "category": "History",
+        "emoji": "🌐",
+        "fact": "The World Wide Web was invented by Tim Berners-Lee in 1989 while he was working at CERN in Switzerland.",
+        "question": "Who invented the World Wide Web?",
+        "options": [
+            "Bill Gates",
+            "Steve Jobs",
+            "Tim Berners-Lee",
+            "Alan Turing"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 25,
+        "category": "Animals",
+        "emoji": "🐙",
+        "fact": "Octopuses have three hearts! Two pump blood to the gills, and one pumps it to the rest of the body. Their blood is also blue!",
+        "question": "How many hearts does an octopus have?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 26,
+        "category": "Nature",
+        "emoji": "🌋",
+        "fact": "The tallest volcano in our solar system is Olympus Mons on Mars. It's about 21 km high — nearly 3 times the height of Mount Everest!",
+        "question": "Where is the tallest volcano in the solar system?",
+        "options": [
+            "Earth (Hawaii)",
+            "Venus",
+            "Mars",
+            "Jupiter's moon Io"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 27,
+        "category": "Human Body",
+        "emoji": "🦷",
+        "fact": "Tooth enamel is the hardest substance in the human body, even harder than bone. But it cannot repair itself once damaged!",
+        "question": "What is the hardest substance in the human body?",
+        "options": [
+            "Bone",
+            "Cartilage",
+            "Tooth enamel",
+            "Fingernails"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 28,
+        "category": "Science",
+        "emoji": "🧲",
+        "fact": "A teaspoonful of neutron star material would weigh about 10 million tonnes. Neutron stars are incredibly dense objects formed from collapsed massive stars.",
+        "question": "How much would a teaspoon of neutron star material weigh?",
+        "options": [
+            "1 tonne",
+            "1,000 tonnes",
+            "10 million tonnes",
+            "1 billion tonnes"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 29,
+        "category": "Geography",
+        "emoji": "🌴",
+        "fact": "Canada has more lakes than the rest of the world combined! It has about 879,800 lakes, containing about 20% of the world's fresh water.",
+        "question": "Which country has more lakes than the rest of the world combined?",
+        "options": [
+            "Russia",
+            "Brazil",
+            "Canada",
+            "Finland"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 30,
+        "category": "History",
+        "emoji": "🎵",
+        "fact": "Beethoven continued composing music even after going completely deaf. He composed his famous 9th Symphony while totally deaf.",
+        "question": "What disability did Beethoven have when he composed his 9th Symphony?",
+        "options": [
+            "Blind",
+            "Deaf",
+            "Paralyzed hand",
+            "Memory loss"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 31,
+        "category": "Animals",
+        "emoji": "🦜",
+        "fact": "African Grey parrots can learn up to 1,000 words and understand concepts like shape, color, and number. Some can solve complex puzzles!",
+        "question": "Approximately how many words can African Grey parrots learn?",
+        "options": [
+            "100 words",
+            "500 words",
+            "1,000 words",
+            "5,000 words"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 32,
+        "category": "Space",
+        "emoji": "🪐",
+        "fact": "A day on Venus is longer than a year on Venus! It takes 243 Earth days to rotate once, but only 225 Earth days to orbit the Sun.",
+        "question": "What unusual fact is true about Venus?",
+        "options": [
+            "It has rings like Saturn",
+            "Its day is longer than its year",
+            "It spins in the same direction as Earth",
+            "It has a large moon"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 33,
+        "category": "Science",
+        "emoji": "🎆",
+        "fact": "Fireworks are different colors due to different metal salts. Red = strontium, Blue = copper, Green = barium, Yellow = sodium.",
+        "question": "Which metal salt creates RED fireworks?",
+        "options": [
+            "Copper",
+            "Barium",
+            "Sodium",
+            "Strontium"
+        ],
+        "correctAnswerIndex": 3,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 34,
+        "category": "Human Body",
+        "emoji": "🫁",
+        "fact": "If you stretched out all the airways in your lungs, they would be about 2,400 km long — roughly the distance from New York to Dallas!",
+        "question": "How long would your lung airways be if stretched out?",
+        "options": [
+            "100 km",
+            "500 km",
+            "2,400 km",
+            "10,000 km"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 35,
+        "category": "Technology",
+        "emoji": "🤖",
+        "fact": "The word 'robot' comes from the Czech word 'robota' meaning 'forced labor' or 'drudgery'. It was first used in a 1920 play.",
+        "question": "From which language does the word 'robot' originate?",
+        "options": [
+            "German",
+            "Russian",
+            "Czech",
+            "Greek"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 36,
+        "category": "Nature",
+        "emoji": "🌈",
+        "fact": "A double rainbow occurs when light is reflected twice inside water droplets. The colors in the outer rainbow are reversed!",
+        "question": "What happens to colors in the outer arc of a double rainbow?",
+        "options": [
+            "They're brighter",
+            "They're reversed",
+            "They're the same",
+            "They're dimmer only"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 37,
+        "category": "Geography",
+        "emoji": "🌏",
+        "fact": "Australia is the only continent that is also a country. It was first inhabited by Aboriginal Australians over 50,000 years ago.",
+        "question": "What unique distinction does Australia have?",
+        "options": [
+            "Northernmost country",
+            "Only island country",
+            "Only continent-country",
+            "Largest island"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 38,
+        "category": "Animals",
+        "emoji": "🦒",
+        "fact": "Giraffes have the same number of neck vertebrae as humans — just 7! Each vertebra can be up to 25 cm long, though.",
+        "question": "How many neck vertebrae do giraffes have?",
+        "options": [
+            "14",
+            "21",
+            "7",
+            "35"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 39,
+        "category": "History",
+        "emoji": "🎨",
+        "fact": "Leonardo da Vinci was left-handed and wrote his notes in mirror writing, from right to left. He helped invent the helicopter concept!",
+        "question": "What unusual writing style did Leonardo da Vinci use?",
+        "options": [
+            "Coded writing",
+            "Mirror writing",
+            "Symbol-only writing",
+            "Ancient Latin"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 40,
+        "category": "Science",
+        "emoji": "💎",
+        "fact": "Diamonds can be made from peanut butter! Scientists have created tiny diamonds by squeezing peanut butter under extreme pressure.",
+        "question": "Scientists have made tiny diamonds from which unexpected material?",
+        "options": [
+            "Seawater",
+            "Coal ash",
+            "Peanut butter",
+            "Pencil graphite"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 41,
+        "category": "Space",
+        "emoji": "☄️",
+        "fact": "The asteroid belt between Mars and Jupiter contains millions of asteroids. If all were combined, they'd be smaller than Earth's Moon!",
+        "question": "How does the total mass of the asteroid belt compare to Earth's Moon?",
+        "options": [
+            "10x larger than Moon",
+            "Same size as Moon",
+            "Smaller than Moon",
+            "100x larger"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "HARD"
+    },
+    {
+        "id": 42,
+        "category": "Human Body",
+        "emoji": "🦴",
+        "fact": "Babies are born with about 300 bones, but adults only have 206. Bones slowly fuse together during growth, especially in the skull and spine.",
+        "question": "How many bones are babies born with?",
+        "options": [
+            "206",
+            "250",
+            "300",
+            "350"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "EASY"
+    },
+    {
+        "id": 43,
+        "category": "Nature",
+        "emoji": "🌸",
+        "fact": "The world's largest flower is the Rafflesia arnoldii, which can be up to 1 meter in diameter. It smells like rotting flesh to attract flies!",
+        "question": "What is the world's largest flower?",
+        "options": [
+            "Titan Arum",
+            "Rafflesia arnoldii",
+            "Sunflower",
+            "Giant Lotus"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 44,
+        "category": "Technology",
+        "emoji": "🛰️",
+        "fact": "The International Space Station travels at 28,000 km/h and orbits Earth about 16 times per day. Astronauts see 16 sunrises daily!",
+        "question": "How many times per day does the ISS orbit Earth?",
+        "options": [
+            "8 times",
+            "12 times",
+            "16 times",
+            "24 times"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 45,
+        "category": "Animals",
+        "emoji": "🐝",
+        "fact": "A single bee produces only about 1/12th of a teaspoon of honey in its lifetime. It takes thousands of bees to make one jar of honey!",
+        "question": "How much honey does a single bee produce in its lifetime?",
+        "options": [
+            "1 teaspoon",
+            "1 tablespoon",
+            "1/12 teaspoon",
+            "1 cup"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 46,
+        "category": "History",
+        "emoji": "📜",
+        "fact": "The oldest known written language is Sumerian script, developed around 3400 BCE in ancient Mesopotamia (modern-day Iraq).",
+        "question": "What is the oldest known written language?",
+        "options": [
+            "Egyptian hieroglyphics",
+            "Chinese characters",
+            "Sumerian script",
+            "Greek alphabet"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 47,
+        "category": "Science",
+        "emoji": "🌊",
+        "fact": "Sound travels about 4.3 times faster in water than in air! Sound travels at 343 m/s in air but 1,484 m/s in water.",
+        "question": "How much faster does sound travel in water compared to air?",
+        "options": [
+            "2 times faster",
+            "4.3 times faster",
+            "10 times faster",
+            "Same speed"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 48,
+        "category": "Geography",
+        "emoji": "🏜️",
+        "fact": "Antarctica is actually a desert! The Sahara gets more annual precipitation. Antarctica receives about 200mm of precipitation per year.",
+        "question": "Why is Antarctica considered a desert?",
+        "options": [
+            "No plant life",
+            "Very cold temperatures",
+            "Very little precipitation",
+            "No human habitation"
+        ],
+        "correctAnswerIndex": 2,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 49,
+        "category": "Animals",
+        "emoji": "🦎",
+        "fact": "Axolotls can regenerate entire limbs, parts of their heart and brain, and even their spinal cord! They stay in a juvenile form for life.",
+        "question": "What amazing regeneration ability do axolotls have?",
+        "options": [
+            "Regenerate only skin",
+            "Regenerate limbs and organs",
+            "Regenerate teeth only",
+            "Regrow their tails"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "MEDIUM"
+    },
+    {
+        "id": 50,
+        "category": "Human Body",
+        "emoji": "⚗️",
+        "fact": "The human stomach produces a new lining every 3-4 days. Without this protection, the stomach's acid would digest itself!",
+        "question": "How often does the human stomach produce a new lining?",
+        "options": [
+            "Every day",
+            "Every 3-4 days",
+            "Every week",
+            "Every month"
+        ],
+        "correctAnswerIndex": 1,
+        "difficulty": "HARD"
+    }
+]
