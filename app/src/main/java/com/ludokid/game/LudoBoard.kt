@@ -13,15 +13,16 @@ import com.ludokid.data.*
 object LudoBoard {
 
     const val BOARD_SIZE = 52          // Shared path cells
-    const val SAFE_ZONE_SIZE = 6       // Cells in the colored home stretch
-    const val FINISHING_POSITION = 57  // Virtual "finished" position
+    const val SAFE_ZONE_SIZE = 5       // Cells in the colored home stretch
+    const val FINISHING_POSITION = 100 // Virtual "finished" position
 
     // Starting positions for each player on the shared board
+    // Red (0), Green (1), Yellow (2), Blue (3)
     val START_POSITIONS = mapOf(
         0 to 0,  // Red starts at cell 0
-        1 to 13, // Blue starts at cell 13
-        2 to 26, // Green starts at cell 26
-        3 to 39  // Yellow starts at cell 39
+        1 to 13, // Green starts at cell 13
+        2 to 26, // Yellow starts at cell 26
+        3 to 39  // Blue starts at cell 39
     )
 
     // Cells that are "safe" from being killed (star/safe cells on the board)
@@ -30,9 +31,9 @@ object LudoBoard {
     // Position where each player enters the safe zone (their COLOR path begins)
     val SAFE_ZONE_ENTRY = mapOf(
         0 to 50,  // Red enters safe zone at board position 50
-        1 to 11,  // Blue
-        2 to 24,  // Green
-        3 to 37   // Yellow
+        1 to 11,  // Green 
+        2 to 24,  // Yellow 
+        3 to 37   // Blue 
     )
 
     /**
@@ -48,7 +49,8 @@ object LudoBoard {
                     newPos != null
                 }
                 pawn.state == PawnState.SAFE_ZONE -> {
-                    val remainingSteps = SAFE_ZONE_SIZE - pawn.boardPosition + (BOARD_SIZE + SAFE_ZONE_SIZE * player.id)
+                    val safePos = pawn.boardPosition - (BOARD_SIZE + player.id * SAFE_ZONE_SIZE)
+                    val remainingSteps = SAFE_ZONE_SIZE - safePos
                     diceValue <= remainingSteps
                 }
                 else -> false
@@ -68,7 +70,7 @@ object LudoBoard {
         if (pawn.state == PawnState.FINISHED) return null
 
         if (pawn.state == PawnState.SAFE_ZONE) {
-            val safePos = pawn.boardPosition // 0-5 within safe zone
+            val safePos = pawn.boardPosition - (BOARD_SIZE + playerId * SAFE_ZONE_SIZE) // 0 to 4 within safe zone
             val newSafePos = safePos + steps
             return if (newSafePos > SAFE_ZONE_SIZE) null  // Can't overshoot
             else if (newSafePos == SAFE_ZONE_SIZE) FINISHING_POSITION

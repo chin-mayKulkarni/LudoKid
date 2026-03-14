@@ -159,24 +159,30 @@ class LudoBoardView @JvmOverloads constructor(
     private fun buildSimplePath(): List<Pair<Int, Int>> {
         // Standard Ludo 52-cell path in grid coordinates (15x15 grid)
         return listOf(
-            // Red start → moving right/up (positions 0-12)
-            14 to 6, 13 to 6, 12 to 6, 11 to 6, 10 to 6, 9 to 6, 8 to 6, 7 to 6,
-            6 to 5, 6 to 4, 6 to 3, 6 to 2, 6 to 1,
-            // Top-left area (positions 13-25)
-            5 to 0, 4 to 0, 3 to 0, 2 to 0, 1 to 0,
-            0 to 1, 0 to 2, 0 to 3, 0 to 4, 0 to 5,
-            1 to 6, 2 to 6, 3 to 6,   // was: 0 to 6
-            // Blue start area (positions 26-38)
-            4 to 6, 5 to 6,
-            6 to 7, 6 to 8,
-            5 to 8, 4 to 8, 3 to 8, 2 to 8, 1 to 8,
-            0 to 8, 0 to 9, 0 to 10, 0 to 11, 0 to 12, 0 to 13,
-            // Right side (positions 39-51)
-            1 to 14, 2 to 14, 3 to 14, 4 to 14, 5 to 14,
-            6 to 13, 6 to 12, 6 to 11, 6 to 10, 6 to 9,
-            7 to 8, 8 to 8,
-            9 to 8, 10 to 8, 11 to 8, 12 to 8, 13 to 8,
-            14 to 8, 14 to 7
+            // Red Arm (0-4)
+            6 to 1, 6 to 2, 6 to 3, 6 to 4, 6 to 5,
+            // Green Arm Up (5-10)
+            5 to 6, 4 to 6, 3 to 6, 2 to 6, 1 to 6, 0 to 6,
+            // Top Edge (11-12)
+            0 to 7, 0 to 8,
+            // Green Arm Down (13-17)  [13 is Green Start]
+            1 to 8, 2 to 8, 3 to 8, 4 to 8, 5 to 8,
+            // Yellow Arm Right (18-23)
+            6 to 9, 6 to 10, 6 to 11, 6 to 12, 6 to 13, 6 to 14,
+            // Right Edge (24-25)
+            7 to 14, 8 to 14,
+            // Yellow Arm Left (26-30) [26 is Yellow Start]
+            8 to 13, 8 to 12, 8 to 11, 8 to 10, 8 to 9,
+            // Blue Arm Down (31-36)
+            9 to 8, 10 to 8, 11 to 8, 12 to 8, 13 to 8, 14 to 8,
+            // Bottom Edge (37-38)
+            14 to 7, 14 to 6,
+            // Blue Arm Up (39-43) [39 is Blue Start]
+            13 to 6, 12 to 6, 11 to 6, 10 to 6, 9 to 6,
+            // Red Arm Left (44-49)
+            8 to 5, 8 to 4, 8 to 3, 8 to 2, 8 to 1, 8 to 0,
+            // Left Edge (50-51)
+            7 to 0, 6 to 0
         )
     }
 
@@ -282,11 +288,9 @@ class LudoBoardView @JvmOverloads constructor(
     }
 
     private fun isSafeCellGrid(row: Int, col: Int): Boolean {
-        // Safe cells at specific positions on the board
-        return (row == 6 && col == 1) ||    // Red start-adjacent
-                (row == 1 && col == 6) ||    // Green start-adjacent
-                (row == 6 && col == 13) ||   // Blue start-adjacent
-                (row == 13 && col == 8)      // Yellow start-adjacent
+        val path = buildSimplePath()
+        val index = path.indexOfFirst { it.first == row && it.second == col }
+        return LudoBoard.SAFE_CELLS.contains(index)
     }
 
     private fun getPathColor(row: Int, col: Int): Int {
@@ -477,8 +481,8 @@ class LudoBoardView @JvmOverloads constructor(
         return when (playerId) {
             0 -> PointF(boardOffset + (1 + step) * cellSize + cellSize / 2f, 7 * cellSize + cellSize / 2f) // Red
             1 -> PointF(boardOffset + 7 * cellSize + cellSize / 2f, (1 + step) * cellSize + cellSize / 2f) // Green
-            2 -> PointF(boardOffset + (9 + step) * cellSize + cellSize / 2f, 7 * cellSize + cellSize / 2f) // Blue
-            else -> PointF(boardOffset + 7 * cellSize + cellSize / 2f, (9 + step) * cellSize + cellSize / 2f) // Yellow
+            2 -> PointF(boardOffset + (13 - step) * cellSize + cellSize / 2f, 7 * cellSize + cellSize / 2f) // Yellow
+            else -> PointF(boardOffset + 7 * cellSize + cellSize / 2f, (13 - step) * cellSize + cellSize / 2f) // Blue
         }
     }
 
@@ -489,8 +493,8 @@ class LudoBoardView @JvmOverloads constructor(
         return when (playerId) {
             0 -> PointF(cx - offset, cy)      // Red center left
             1 -> PointF(cx, cy - offset)      // Green center top
-            2 -> PointF(cx + offset, cy)      // Blue center right
-            else -> PointF(cx, cy + offset)   // Yellow center bottom
+            2 -> PointF(cx, cy + offset)   // Yellow center bottom
+            else -> PointF(cx + offset, cy)      // Blue center right
         }
     }
 

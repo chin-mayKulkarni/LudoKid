@@ -27,7 +27,7 @@ enum class PawnState {
 
 enum class PlayerColor(val colorHex: String, val lightColorHex: String, val darkColorHex: String) {
     RED("#E53935", "#FFCDD2", "#B71C1C"),
-    BLUE("#1E88E5", "#BBDEFB", "#0D47A1"),
     GREEN("#43A047", "#C8E6C9", "#1B5E20"),
-    YELLOW("#FDD835", "#FFF9C4", "#F57F17")
+    YELLOW("#FDD835", "#FFF9C4", "#F57F17"),
+    BLUE("#1E88E5", "#BBDEFB", "#0D47A1")
 }
