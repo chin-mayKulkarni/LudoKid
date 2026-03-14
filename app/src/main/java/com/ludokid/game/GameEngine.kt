@@ -66,22 +66,34 @@ class GameEngine(
             delay(600)
 
             val diceValue = dice.roll()
-            val triviaCard = triviaRepository.getNextCard()
-
             val currentPlayer = state.players[state.currentPlayerIndex]
             val moveablePawns = LudoBoard.getMoveablePawns(currentPlayer, diceValue, state.players)
 
-            val newSeenCards = state.seenTriviaCards.toMutableList().also { it.add(triviaCard) }
+            if (moveablePawns.isEmpty()) {
+                val newState = state.copy(
+                    diceValue = diceValue,
+                    phase = GamePhase.ANIMATING_MOVE,
+                    currentTriviaCard = null,
+                    moveablePawns = emptyList()
+                )
+                _gameState.postValue(newState)
+                _uiEvent.postValue(GameEvent.NoMoveablePawns)
+                delay(1200)
+                processEndOfTurn(newState)
+            } else {
+                val triviaCard = triviaRepository.getNextCard()
+                val newSeenCards = state.seenTriviaCards.toMutableList().also { it.add(triviaCard) }
 
-            val newState = state.copy(
-                diceValue = diceValue,
-                currentTriviaCard = triviaCard,
-                seenTriviaCards = newSeenCards,
-                phase = GamePhase.SHOWING_TRIVIA,
-                moveablePawns = moveablePawns
-            )
-            _gameState.postValue(newState)
-            _uiEvent.postValue(GameEvent.ShowTriviaCard(triviaCard, diceValue))
+                val newState = state.copy(
+                    diceValue = diceValue,
+                    currentTriviaCard = triviaCard,
+                    seenTriviaCards = newSeenCards,
+                    phase = GamePhase.SHOWING_TRIVIA,
+                    moveablePawns = moveablePawns
+                )
+                _gameState.postValue(newState)
+                _uiEvent.postValue(GameEvent.ShowTriviaCard(triviaCard, diceValue))
+            }
         }
     }
 
@@ -91,17 +103,8 @@ class GameEngine(
         val state = _gameState.value ?: return
         if (state.phase != GamePhase.SHOWING_TRIVIA) return
 
-        if (state.moveablePawns.isEmpty()) {
-            // No moveable pawns — skip to next player
-            _uiEvent.value = GameEvent.NoMoveablePawns
-            scope.launch {
-                delay(1200)
-                nextTurn()
-            }
-        } else {
-            _gameState.value = state.copy(phase = GamePhase.SELECTING_PAWN)
-            _uiEvent.value = GameEvent.SelectPawn(state.moveablePawns)
-        }
+        _gameState.value = state.copy(phase = GamePhase.SELECTING_PAWN)
+        _uiEvent.value = GameEvent.SelectPawn(state.moveablePawns)
     }
 
     // ─── PAWN SELECTED ────────────────────────────────────────────────────────
