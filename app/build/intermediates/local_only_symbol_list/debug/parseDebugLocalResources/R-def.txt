@@ -38,6 +38,7 @@ id btnStartGame
 id cardCurrentPlayer
 id cardHowToPlay
 id cardMainMenu
+id cardQuiz
 id diceView
 id etPlayer1
 id etPlayer2

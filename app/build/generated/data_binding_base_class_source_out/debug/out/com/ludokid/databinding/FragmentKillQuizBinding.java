@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.ludokid.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -32,6 +33,9 @@ public final class FragmentKillQuizBinding implements ViewBinding {
 
   @NonNull
   public final MaterialButton btnOption3;
+
+  @NonNull
+  public final MaterialCardView cardQuiz;
 
   @NonNull
   public final ProgressBar progressTimer;
@@ -56,14 +60,16 @@ public final class FragmentKillQuizBinding implements ViewBinding {
 
   private FragmentKillQuizBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnOption0,
       @NonNull MaterialButton btnOption1, @NonNull MaterialButton btnOption2,
-      @NonNull MaterialButton btnOption3, @NonNull ProgressBar progressTimer,
-      @NonNull TextView tvEmoji, @NonNull TextView tvQuestion, @NonNull TextView tvQuizSubtitle,
-      @NonNull TextView tvQuizTitle, @NonNull TextView tvResult, @NonNull TextView tvTimer) {
+      @NonNull MaterialButton btnOption3, @NonNull MaterialCardView cardQuiz,
+      @NonNull ProgressBar progressTimer, @NonNull TextView tvEmoji, @NonNull TextView tvQuestion,
+      @NonNull TextView tvQuizSubtitle, @NonNull TextView tvQuizTitle, @NonNull TextView tvResult,
+      @NonNull TextView tvTimer) {
     this.rootView = rootView;
     this.btnOption0 = btnOption0;
     this.btnOption1 = btnOption1;
     this.btnOption2 = btnOption2;
     this.btnOption3 = btnOption3;
+    this.cardQuiz = cardQuiz;
     this.progressTimer = progressTimer;
     this.tvEmoji = tvEmoji;
     this.tvQuestion = tvQuestion;
@@ -124,6 +130,12 @@ public final class FragmentKillQuizBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cardQuiz;
+      MaterialCardView cardQuiz = ViewBindings.findChildViewById(rootView, id);
+      if (cardQuiz == null) {
+        break missingId;
+      }
+
       id = R.id.progressTimer;
       ProgressBar progressTimer = ViewBindings.findChildViewById(rootView, id);
       if (progressTimer == null) {
@@ -167,8 +179,8 @@ public final class FragmentKillQuizBinding implements ViewBinding {
       }
 
       return new FragmentKillQuizBinding((ScrollView) rootView, btnOption0, btnOption1, btnOption2,
-          btnOption3, progressTimer, tvEmoji, tvQuestion, tvQuizSubtitle, tvQuizTitle, tvResult,
-          tvTimer);
+          btnOption3, cardQuiz, progressTimer, tvEmoji, tvQuestion, tvQuizSubtitle, tvQuizTitle,
+          tvResult, tvTimer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

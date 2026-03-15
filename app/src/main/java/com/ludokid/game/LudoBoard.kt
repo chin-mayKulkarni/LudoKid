@@ -26,7 +26,8 @@ object LudoBoard {
     )
 
     // Cells that are "safe" from being killed (star/safe cells on the board)
-    val SAFE_CELLS = setOf(0, 8, 13, 21, 26, 34, 39, 47)
+    // Position 0 removed — it is Red's start cell, not a universal safe star
+    val SAFE_CELLS = setOf(8, 13, 21, 26, 34, 39, 47)
 
     // Position where each player enters the safe zone (their COLOR path begins)
     val SAFE_ZONE_ENTRY = mapOf(
@@ -46,7 +47,7 @@ object LudoBoard {
                 pawn.state == PawnState.HOME -> diceValue == 6
                 pawn.state == PawnState.ACTIVE -> {
                     val newPos = getNewPosition(pawn, diceValue, player.id)
-                    newPos != null
+                    newPos != null && !isBlockade(newPos, allPlayers)
                 }
                 pawn.state == PawnState.SAFE_ZONE -> {
                     val safePos = pawn.boardPosition - (BOARD_SIZE + player.id * SAFE_ZONE_SIZE)
@@ -72,17 +73,19 @@ object LudoBoard {
         if (pawn.state == PawnState.SAFE_ZONE) {
             val safePos = pawn.boardPosition - (BOARD_SIZE + playerId * SAFE_ZONE_SIZE) // 0 to 4 within safe zone
             val newSafePos = safePos + steps
-            return if (newSafePos > SAFE_ZONE_SIZE) null  // Can't overshoot
-            else if (newSafePos == SAFE_ZONE_SIZE) FINISHING_POSITION
-            else BOARD_SIZE + playerId * SAFE_ZONE_SIZE + newSafePos
+            return when {
+                newSafePos == SAFE_ZONE_SIZE -> FINISHING_POSITION          // exact finish
+                newSafePos > SAFE_ZONE_SIZE -> null                          // overshoot — blocked
+                else -> BOARD_SIZE + playerId * SAFE_ZONE_SIZE + newSafePos
+            }
         }
 
         // Active pawn on shared board
         val safeEntry = SAFE_ZONE_ENTRY[playerId] ?: return null
         val currentPos = pawn.boardPosition
 
-        // Calculate steps to safe zone entry
-        val stepsToEntry = ((safeEntry - currentPos + BOARD_SIZE) % BOARD_SIZE) + 1
+        // Calculate steps to safe zone entry (no +1: entry fires exactly when steps == stepsToEntry)
+        val stepsToEntry = (safeEntry - currentPos + BOARD_SIZE) % BOARD_SIZE
 
         return when {
             steps < stepsToEntry -> (currentPos + steps) % BOARD_SIZE

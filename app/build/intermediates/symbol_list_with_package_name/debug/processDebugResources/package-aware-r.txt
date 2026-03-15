@@ -3237,6 +3237,7 @@ id cancel_button
 id cardCurrentPlayer
 id cardHowToPlay
 id cardMainMenu
+id cardQuiz
 id carryVelocity
 id center
 id centerCrop

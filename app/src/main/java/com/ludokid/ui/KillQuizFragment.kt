@@ -108,11 +108,11 @@ class KillQuizFragment : DialogFragment() {
 
         startTimer()
 
-        // Animate in
-        binding.root.scaleX = 0.8f
-        binding.root.scaleY = 0.8f
-        binding.root.alpha = 0f
-        binding.root.animate()
+        // Animate inner card — not root ScrollView (avoids child content clipping)
+        binding.cardQuiz.scaleX = 0.8f
+        binding.cardQuiz.scaleY = 0.8f
+        binding.cardQuiz.alpha = 0f
+        binding.cardQuiz.animate()
             .scaleX(1f).scaleY(1f).alpha(1f)
             .setDuration(350)
             .setInterpolator(android.view.animation.OvershootInterpolator())
