@@ -50,12 +50,14 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun setupDiceView() {
-        binding.diceView.setOnClickListener {
+        val rollAction = {
             val state = viewModel.gameState.value
             if (state?.phase == GamePhase.WAITING_TO_ROLL) {
                 viewModel.rollDice()
             }
         }
+        binding.diceView.setOnClickListener { rollAction() }
+        binding.btnRollDice.setOnClickListener { rollAction() }
     }
 
     private fun observeGameState() {
@@ -105,7 +107,7 @@ class GameActivity : AppCompatActivity() {
                 }
 
                 is GameEvent.PawnMoved -> {
-                    binding.ludoBoard.invalidate()
+                    binding.ludoBoard.animatePawnMove(event.pawn, event.newPosition)
                 }
 
                 is GameEvent.BonusTurn -> {

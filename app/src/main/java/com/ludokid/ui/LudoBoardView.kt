@@ -92,6 +92,9 @@ class LudoBoardView @JvmOverloads constructor(
 
     var onPawnSelected: ((Pawn) -> Unit)? = null
 
+    // Temporary override for step-by-step pawn movement animation (pawnId to tempPosition)
+    private var animatingPawnOverride: Pair<Int, Int>? = null
+
     // 15x15 grid of board cell positions mapped to pixel coordinates
     private val cellCenters = Array(15) { Array(15) { PointF(0f, 0f) } }
 
@@ -184,6 +187,7 @@ class LudoBoardView @JvmOverloads constructor(
             // Left Edge (50-51)
             7 to 0, 6 to 0
         )
+        // NOTE: list must have exactly 52 entries — no trailing duplicates
     }
 
     // ─── Draw ─────────────────────────────────────────────────────────────────
@@ -199,7 +203,7 @@ class LudoBoardView @JvmOverloads constructor(
     }
 
     private fun drawBackground(canvas: Canvas) {
-        fillPaint.color = Color.parseColor("#F5F5DC")
+        fillPaint.color = Color.parseColor("#1A1A2E")
         canvas.drawRect(boardOffset, 0f, boardOffset + 15 * cellSize, 15 * cellSize, fillPaint)
     }
 
@@ -295,10 +299,10 @@ class LudoBoardView @JvmOverloads constructor(
 
     private fun getPathColor(row: Int, col: Int): Int {
         return when {
-            row in 7..7 && col in 1..5 -> lightRed    // Red home stretch
-            row in 7..7 && col in 9..13 -> lightBlue
-            col in 7..7 && row in 1..5 -> lightGreen
-            col in 7..7 && row in 9..13 -> lightYellow
+            row == 7 && col in 1..5   -> lightRed     // Red home stretch (row 7, left)
+            row == 7 && col in 9..13  -> lightBlue    // Blue home stretch (row 7, right)
+            col == 7 && row in 1..5   -> lightGreen   // Green home stretch (col 7, top)
+            col == 7 && row in 9..13  -> lightYellow  // Yellow home stretch (col 7, bottom)
             else -> colorWhite
         }
     }
@@ -356,8 +360,8 @@ class LudoBoardView @JvmOverloads constructor(
         }
         canvas.drawPath(topPath, trianglePaint)
 
-        // Right (Blue)
-        trianglePaint.color = colorBlue
+        // Right (Yellow — standard Ludo: Yellow is right)
+        trianglePaint.color = colorYellow
         val rightPath = Path().apply {
             moveTo(cx, cy)
             lineTo(cx + half, cy - half)
@@ -366,8 +370,8 @@ class LudoBoardView @JvmOverloads constructor(
         }
         canvas.drawPath(rightPath, trianglePaint)
 
-        // Bottom (Yellow)
-        trianglePaint.color = colorYellow
+        // Bottom (Blue — standard Ludo: Blue is bottom)
+        trianglePaint.color = colorBlue
         val bottomPath = Path().apply {
             moveTo(cx, cy)
             lineTo(cx - half, cy + half)
@@ -439,12 +443,58 @@ class LudoBoardView @JvmOverloads constructor(
     }
 
     private fun getPawnCenter(pawn: Pawn, player: Player): PointF? {
+        // Use animation override position if this pawn is currently being animated
+        val overridePos = animatingPawnOverride
+        val effectivePosition = if (overridePos != null && overridePos.first == pawn.id && pawn.playerId == (overridePos.first / 4)) {
+            overridePos.second
+        } else null
+
         return when (pawn.state) {
             PawnState.HOME -> getHomePosition(pawn, player)
-            PawnState.ACTIVE -> getBoardPosition(pawn.boardPosition)
-            PawnState.SAFE_ZONE -> getSafeZonePosition(pawn.boardPosition, player.id)
+            PawnState.ACTIVE -> getBoardPosition(effectivePosition ?: pawn.boardPosition)
+            PawnState.SAFE_ZONE -> getSafeZonePosition(effectivePosition ?: pawn.boardPosition, player.id)
             PawnState.FINISHED -> getCenterFinishPosition(player.id)
         }
+    }
+
+    /**
+     * Animates a pawn stepping through each intermediate board cell at 120ms per step.
+     */
+    fun animatePawnMove(pawn: Pawn, finalPosition: Int) {
+        val startPos = pawn.boardPosition
+        if (startPos == finalPosition) {
+            invalidate()
+            return
+        }
+
+        // Build list of intermediate positions
+        val steps = mutableListOf<Int>()
+        if (finalPosition < LudoBoard.BOARD_SIZE && startPos < LudoBoard.BOARD_SIZE) {
+            // Both on shared board — step through each cell
+            var pos = startPos
+            while (pos != finalPosition) {
+                pos = (pos + 1) % LudoBoard.BOARD_SIZE
+                steps.add(pos)
+            }
+        } else {
+            // Entering safe zone or finishing — just show final position
+            steps.add(finalPosition)
+        }
+
+        val handler = android.os.Handler(android.os.Looper.getMainLooper())
+        // Use a unique key per pawn: playerId * 4 + pawnId
+        val pawnKey = pawn.playerId * 4 + pawn.id
+
+        steps.forEachIndexed { i, pos ->
+            handler.postDelayed({
+                animatingPawnOverride = pawnKey to pos
+                invalidate()
+            }, i * 120L)
+        }
+        handler.postDelayed({
+            animatingPawnOverride = null
+            invalidate()
+        }, steps.size * 120L)
     }
 
     private fun getHomePosition(pawn: Pawn, player: Player): PointF {
@@ -491,10 +541,10 @@ class LudoBoardView @JvmOverloads constructor(
         val cy = 7.5f * cellSize
         val offset = cellSize * 0.3f
         return when (playerId) {
-            0 -> PointF(cx - offset, cy)      // Red center left
-            1 -> PointF(cx, cy - offset)      // Green center top
-            2 -> PointF(cx, cy + offset)   // Yellow center bottom
-            else -> PointF(cx + offset, cy)      // Blue center right
+            0 -> PointF(cx - offset, cy)   // Red — left
+            1 -> PointF(cx, cy - offset)   // Green — top
+            2 -> PointF(cx + offset, cy)   // Yellow — right
+            else -> PointF(cx, cy + offset) // Blue — bottom
         }
     }
 

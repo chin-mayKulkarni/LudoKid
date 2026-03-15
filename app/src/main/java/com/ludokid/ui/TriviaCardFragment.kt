@@ -105,6 +105,12 @@ class TriviaCardFragment : DialogFragment() {
         onDismissed?.invoke()
     }
 
+    override fun onCancel(dialog: android.content.DialogInterface) {
+        super.onCancel(dialog)
+        countDownTimer?.cancel()
+        onDismissed?.invoke()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         countDownTimer?.cancel()

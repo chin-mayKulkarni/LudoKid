@@ -39,7 +39,12 @@ class GameEngine(
             Player(
                 id = index,
                 name = playerNames.getOrElse(index) { "Player ${index + 1}" },
-                color = PlayerColor.values()[index],
+                color = when (index) {
+                    0 -> PlayerColor.RED
+                    1 -> PlayerColor.BLUE
+                    2 -> PlayerColor.GREEN
+                    else -> PlayerColor.YELLOW
+                },
                 isAI = false,
                 pawns = List(4) { pawnIndex ->
                     Pawn(id = pawnIndex, playerId = index, state = PawnState.HOME, boardPosition = -1)
@@ -66,12 +71,29 @@ class GameEngine(
             delay(600)
 
             val diceValue = dice.roll()
+            val newConsecutiveSixes = if (diceValue == 6) state.consecutiveSixes + 1 else 0
             val currentPlayer = state.players[state.currentPlayerIndex]
+
+            // Three consecutive sixes — forfeit turn
+            if (newConsecutiveSixes >= 3) {
+                val forfeitState = state.copy(
+                    diceValue = diceValue,
+                    consecutiveSixes = 0,
+                    phase = GamePhase.ANIMATING_MOVE
+                )
+                _gameState.postValue(forfeitState)
+                _uiEvent.postValue(GameEvent.NoMoveablePawns)
+                delay(1200)
+                nextTurn()
+                return@launch
+            }
+
             val moveablePawns = LudoBoard.getMoveablePawns(currentPlayer, diceValue, state.players)
 
             if (moveablePawns.isEmpty()) {
                 val newState = state.copy(
                     diceValue = diceValue,
+                    consecutiveSixes = newConsecutiveSixes,
                     phase = GamePhase.ANIMATING_MOVE,
                     currentTriviaCard = null,
                     moveablePawns = emptyList()
@@ -86,6 +108,7 @@ class GameEngine(
 
                 val newState = state.copy(
                     diceValue = diceValue,
+                    consecutiveSixes = newConsecutiveSixes,
                     currentTriviaCard = triviaCard,
                     seenTriviaCards = newSeenCards,
                     phase = GamePhase.SHOWING_TRIVIA,
@@ -163,12 +186,23 @@ class GameEngine(
                 val finalState = movePawnInState(newState, pendingKill.attackingPawn, newPosition)
                 processEndOfTurn(finalState)
             } else {
-                // Wrong answer — pawn is safe, don't move
+                // Wrong answer — pawn is safe, but attacker still moves to destination
                 _uiEvent.postValue(GameEvent.PawnSaved(pendingKill.defendingPawn))
                 delay(800)
-                // Move attacker to a position that doesn't kill (stay one step before, or just skip)
-                val skipState = state.copy(phase = GamePhase.ANIMATING_MOVE, pendingKill = null)
-                processEndOfTurn(skipState)
+                val currentPlayer = state.players[state.currentPlayerIndex]
+                val newPosition = LudoBoard.getNewPosition(
+                    pendingKill.attackingPawn, state.diceValue, currentPlayer.id
+                )
+                if (newPosition != null) {
+                    val movedState = movePawnInState(state.copy(pendingKill = null), pendingKill.attackingPawn, newPosition)
+                    _gameState.postValue(movedState)
+                    _uiEvent.postValue(GameEvent.PawnMoved(pendingKill.attackingPawn, newPosition))
+                    delay(500)
+                    processEndOfTurn(movedState)
+                } else {
+                    val skipState = state.copy(phase = GamePhase.ANIMATING_MOVE, pendingKill = null)
+                    processEndOfTurn(skipState)
+                }
             }
         }
     }
@@ -240,8 +274,8 @@ class GameEngine(
             return
         }
 
-        // Check if player gets another turn (rolled a 6)
-        val getsAnotherTurn = state.diceValue == 6
+        // Check if player gets another turn (rolled a 6), but not after three consecutive sixes
+        val getsAnotherTurn = state.diceValue == 6 && state.consecutiveSixes < 3
         if (getsAnotherTurn) {
             val nextState = state.copy(phase = GamePhase.WAITING_TO_ROLL)
             _gameState.postValue(nextState)
@@ -258,6 +292,7 @@ class GameEngine(
             currentPlayerIndex = nextIndex,
             phase = GamePhase.WAITING_TO_ROLL,
             diceValue = 0,
+            consecutiveSixes = 0,
             currentTriviaCard = null,
             pendingKill = null,
             moveablePawns = emptyList()
