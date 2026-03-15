@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ludokid.app-mergeDebugResources-2:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.ludokid.neutech.app-mergeDebugResources-3:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/93926a0b3f82dac56fa69022d313ee9e/transformed/material-1.11.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/e2c2276211ded334ac00f99e01ff3cba/transformed/material-1.11.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

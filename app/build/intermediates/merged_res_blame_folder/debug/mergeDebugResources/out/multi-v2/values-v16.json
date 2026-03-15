@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ludokid.app-mergeDebugResources-2:/values-v16/values-v16.xml",
+            "outputFile": "com.ludokid.neutech.app-mergeDebugResources-3:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/90a51c999f696631fde8d5aaeda487c8/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/68e032beedcb5838ea361352cdd9ede5/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ludokid.app-mergeDebugResources-2:/values-land/values-land.xml",
+            "outputFile": "com.ludokid.neutech.app-mergeDebugResources-3:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/90a51c999f696631fde8d5aaeda487c8/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/68e032beedcb5838ea361352cdd9ede5/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/93926a0b3f82dac56fa69022d313ee9e/transformed/material-1.11.0/res/values-land/values-land.xml",
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/e2c2276211ded334ac00f99e01ff3cba/transformed/material-1.11.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -1,150 +1,271 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.ludokid"
+3    package="com.ludokid.neutech"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <permission
-11-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-12        android:name="com.ludokid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.ludokid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:4:5-36:19
-18        android:allowBackup="true"
-18-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:5:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5bfc25efe2aec89cfd6ac446344da187/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-20        android:debuggable="true"
-21        android:extractNativeLibs="true"
-22        android:label="@string/app_name"
-22-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:6:9-41
-23        android:supportsRtl="true"
-23-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:7:9-35
-24        android:testOnly="true"
-25        android:theme="@style/Theme.LudoKid" >
-25-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:8:9-45
-26        <activity
-26-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:10:9-19:20
-27            android:name="com.ludokid.ui.SplashActivity"
-27-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:11:13-46
-28            android:exported="true"
-28-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:12:13-36
-29            android:screenOrientation="portrait"
-29-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:13:13-49
-30            android:theme="@style/Theme.LudoKid.Splash" >
-30-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:14:13-56
-31            <intent-filter>
-31-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:15:13-18:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:16:17-69
-32-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:16:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:17:17-77
-34-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:17:27-74
-35            </intent-filter>
-36        </activity>
-37        <activity
-37-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:21:9-24:52
-38            android:name="com.ludokid.ui.MainActivity"
-38-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:22:13-44
-39            android:exported="false"
-39-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:23:13-37
-40            android:screenOrientation="portrait" />
-40-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:24:13-49
-41        <activity
-41-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:26:9-29:52
-42            android:name="com.ludokid.ui.GameActivity"
-42-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:27:13-44
-43            android:exported="false"
-43-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:28:13-37
-44            android:screenOrientation="portrait" />
-44-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:29:13-49
-45        <activity
-45-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:31:9-34:52
-46            android:name="com.ludokid.ui.TriviaQuizActivity"
-46-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:32:13-50
-47            android:exported="false"
-47-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:33:13-37
-48            android:screenOrientation="portrait" />
-48-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:34:13-49
-49
-50        <provider
-50-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-51            android:name="androidx.startup.InitializationProvider"
-51-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-52            android:authorities="com.ludokid.androidx-startup"
-52-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-53            android:exported="false" >
-53-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-54            <meta-data
-54-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-55-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-56                android:value="androidx.startup" />
-56-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8b333f317d8a1a921ddf5d7223e3b2db/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-57            <meta-data
-57-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/61f0bc8dfc0ccd5d4b0259caac623c6f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-58-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/61f0bc8dfc0ccd5d4b0259caac623c6f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-59                android:value="androidx.startup" />
-59-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/61f0bc8dfc0ccd5d4b0259caac623c6f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-60            <meta-data
-60-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-61                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-62                android:value="androidx.startup" />
-62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-63        </provider>
+11    <!-- Required permission for App measurement to run. -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:23:5-67
+12-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:23:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:24:5-79
+13-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:24:22-76
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:25:5-68
+14-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:25:22-65
+15    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+15-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:26:5-110
+15-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:26:22-107
+16    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+16-->[com.google.android.gms:play-services-measurement-impl:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5c9a895603eaf1ebcdad004937e7ddf5/transformed/play-services-measurement-impl-23.0.0/AndroidManifest.xml:27:5-79
+16-->[com.google.android.gms:play-services-measurement-impl:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/5c9a895603eaf1ebcdad004937e7ddf5/transformed/play-services-measurement-impl-23.0.0/AndroidManifest.xml:27:22-76
+17    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+17-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:26:5-88
+17-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:26:22-85
+18    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+18-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:27:5-82
+18-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:27:22-79
+19
+20    <permission
+20-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.ludokid.neutech.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.ludokid.neutech.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:4:5-36:19
+27        android:allowBackup="true"
+27-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:5:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.12.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/c6e25e93f923644f6706fa9ab6c2a904/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:label="@string/app_name"
+31-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:6:9-41
+32        android:supportsRtl="true"
+32-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:7:9-35
+33        android:testOnly="true"
+34        android:theme="@style/Theme.LudoKid" >
+34-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:8:9-45
+35        <activity
+35-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:10:9-19:20
+36            android:name="com.ludokid.neutech.ui.SplashActivity"
+36-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:11:13-46
+37            android:exported="true"
+37-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:12:13-36
+38            android:screenOrientation="portrait"
+38-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:13:13-49
+39            android:theme="@style/Theme.LudoKid.Splash" >
+39-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:14:13-56
+40            <intent-filter>
+40-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:15:13-18:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:16:17-69
+41-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:16:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:17:17-77
+43-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:17:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:21:9-24:52
+47            android:name="com.ludokid.neutech.ui.MainActivity"
+47-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:22:13-44
+48            android:exported="false"
+48-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:23:13-37
+49            android:screenOrientation="portrait" />
+49-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:24:13-49
+50        <activity
+50-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:26:9-29:52
+51            android:name="com.ludokid.neutech.ui.GameActivity"
+51-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:27:13-44
+52            android:exported="false"
+52-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:28:13-37
+53            android:screenOrientation="portrait" />
+53-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:29:13-49
+54        <activity
+54-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:31:9-34:52
+55            android:name="com.ludokid.neutech.ui.TriviaQuizActivity"
+55-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:32:13-50
+56            android:exported="false"
+56-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:33:13-37
+57            android:screenOrientation="portrait" />
+57-->/Users/chinmaykulkarni/.gemini/antigravity/scratch/LudoKid/app/src/main/AndroidManifest.xml:34:13-49
+58
+59        <receiver
+59-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:29:9-33:20
+60            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+60-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:30:13-85
+61            android:enabled="true"
+61-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:31:13-35
+62            android:exported="false" >
+62-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:32:13-37
+63        </receiver>
 64
-65        <receiver
-65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-66            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-67            android:directBootAware="false"
-67-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-68            android:enabled="true"
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-69            android:exported="true"
-69-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-70            android:permission="android.permission.DUMP" >
-70-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-71            <intent-filter>
-71-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-72                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-73            </intent-filter>
-74            <intent-filter>
-74-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-75                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-75-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-75-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-76            </intent-filter>
-77            <intent-filter>
-77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-78                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-79            </intent-filter>
-80            <intent-filter>
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-81                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d15693efbcbbb4786cd5ad3736f8d615/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-82            </intent-filter>
-83        </receiver>
-84    </application>
-85
-86</manifest>
+65        <service
+65-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:35:9-38:40
+66            android:name="com.google.android.gms.measurement.AppMeasurementService"
+66-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:36:13-84
+67            android:enabled="true"
+67-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:37:13-35
+68            android:exported="false" />
+68-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:38:13-37
+69        <service
+69-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:39:9-43:72
+70            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+70-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:40:13-87
+71            android:enabled="true"
+71-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:41:13-35
+72            android:exported="false"
+72-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:42:13-37
+73            android:permission="android.permission.BIND_JOB_SERVICE" />
+73-->[com.google.android.gms:play-services-measurement:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8cff86fbd32fe3b7600220ad351c0983/transformed/play-services-measurement-23.0.0/AndroidManifest.xml:43:13-69
+74
+75        <activity
+75-->[com.google.android.gms:play-services-base:18.5.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/2571e651415f6236d2fe3267e69889ef/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:18.5.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/2571e651415f6236d2fe3267e69889ef/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:18.5.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/2571e651415f6236d2fe3267e69889ef/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:18.5.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/2571e651415f6236d2fe3267e69889ef/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+79
+80        <service
+80-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:30:9-36:19
+81            android:name="com.google.firebase.components.ComponentDiscoveryService"
+81-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:31:13-84
+82            android:directBootAware="true"
+82-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:32:13-43
+83            android:exported="false" >
+83-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:32:13-37
+84            <meta-data
+84-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:33:13-35:85
+85                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+85-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:34:17-139
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.android.gms:play-services-measurement-api:23.0.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/fc09935c31e926428ef968584dd485d9/transformed/play-services-measurement-api-23.0.0/AndroidManifest.xml:35:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:15:13-17:85
+88                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+88-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:16:17-130
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:17:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:18:13-20:85
+91                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+91-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:19:17-127
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-installations:19.1.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/37ec05dded42ff2705807a59ff618e78/transformed/firebase-installations-19.1.0/AndroidManifest.xml:20:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:35:13-37:85
+94                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+94-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:36:17-109
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:37:17-82
+96        </service>
+97
+98        <provider
+98-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:23:9-28:39
+99            android:name="com.google.firebase.provider.FirebaseInitProvider"
+99-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:24:13-77
+100            android:authorities="com.ludokid.neutech.firebaseinitprovider"
+100-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:25:13-72
+101            android:directBootAware="true"
+101-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:26:13-43
+102            android:exported="false"
+102-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:27:13-37
+103            android:initOrder="100" />
+103-->[com.google.firebase:firebase-common:22.0.1] /Users/chinmaykulkarni/.gradle/caches/transforms-3/d81ae2ffcab214a4450d68fa112507c7/transformed/firebase-common-22.0.1/AndroidManifest.xml:28:13-36
+104        <provider
+104-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+105            android:name="androidx.startup.InitializationProvider"
+105-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+106            android:authorities="com.ludokid.neutech.androidx-startup"
+106-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+107            android:exported="false" >
+107-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+108            <meta-data
+108-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+109                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+109-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+110                android:value="androidx.startup" />
+110-->[androidx.emoji2:emoji2:1.2.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/ac24e593d3dac51dbaed2e2e97b28fa1/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+111            <meta-data
+111-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8ca8660432a54a55abfdacb077c2dfcc/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+112                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+112-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8ca8660432a54a55abfdacb077c2dfcc/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+113                android:value="androidx.startup" />
+113-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/8ca8660432a54a55abfdacb077c2dfcc/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+114            <meta-data
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+115                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+116                android:value="androidx.startup" />
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+117        </provider>
+118
+119        <uses-library
+119-->[androidx.privacysandbox.ads:ads-adservices:1.1.0-beta11] /Users/chinmaykulkarni/.gradle/caches/transforms-3/563a5349f219ff61ba68837084386891/transformed/ads-adservices-1.1.0-beta11/AndroidManifest.xml:23:9-25:40
+120            android:name="android.ext.adservices"
+120-->[androidx.privacysandbox.ads:ads-adservices:1.1.0-beta11] /Users/chinmaykulkarni/.gradle/caches/transforms-3/563a5349f219ff61ba68837084386891/transformed/ads-adservices-1.1.0-beta11/AndroidManifest.xml:24:13-50
+121            android:required="false" />
+121-->[androidx.privacysandbox.ads:ads-adservices:1.1.0-beta11] /Users/chinmaykulkarni/.gradle/caches/transforms-3/563a5349f219ff61ba68837084386891/transformed/ads-adservices-1.1.0-beta11/AndroidManifest.xml:25:13-37
+122
+123        <meta-data
+123-->[com.google.android.gms:play-services-basement:18.8.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/014bec27e24f8a61827305470c8b3a43/transformed/play-services-basement-18.8.0/AndroidManifest.xml:21:9-23:69
+124            android:name="com.google.android.gms.version"
+124-->[com.google.android.gms:play-services-basement:18.8.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/014bec27e24f8a61827305470c8b3a43/transformed/play-services-basement-18.8.0/AndroidManifest.xml:22:13-58
+125            android:value="@integer/google_play_services_version" />
+125-->[com.google.android.gms:play-services-basement:18.8.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/014bec27e24f8a61827305470c8b3a43/transformed/play-services-basement-18.8.0/AndroidManifest.xml:23:13-66
+126
+127        <receiver
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+128            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+129            android:directBootAware="false"
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+130            android:enabled="true"
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+131            android:exported="true"
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+132            android:permission="android.permission.DUMP" >
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+134                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+135            </intent-filter>
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+137                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+138            </intent-filter>
+139            <intent-filter>
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+140                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+141            </intent-filter>
+142            <intent-filter>
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+143                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chinmaykulkarni/.gradle/caches/transforms-3/cf9989ff9176246c92beb2465bd7aa98/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+144            </intent-filter>
+145        </receiver>
+146    </application>
+147
+148</manifest>

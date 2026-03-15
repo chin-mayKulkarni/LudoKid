@@ -1,7 +1,7 @@
-package com.ludokid
+package com.ludokid.neutech
 
-import com.ludokid.data.*
-import com.ludokid.game.LudoBoard
+import com.ludokid.neutech.data.*
+import com.ludokid.neutech.game.LudoBoard
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -155,7 +155,7 @@ class LudoBugConditionTest {
      */
     @Test
     fun `1_5 processEndOfTurn should forfeit turn when consecutiveSixes reaches 3`() {
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
 
         // Verify processEndOfTurn exists
         val processEndOfTurnMethod = gameEngineClass.declaredMethods
@@ -170,7 +170,7 @@ class LudoBugConditionTest {
         // The unfixed code would grant a bonus turn (getsAnotherTurn = diceValue == 6 → true).
 
         // Verify GameState.consecutiveSixes can hold value 3 (data model supports it)
-        val stateWithThreeSixes = com.ludokid.data.GameState(
+        val stateWithThreeSixes = com.ludokid.neutech.data.GameState(
             players = listOf(
                 makePlayer(0, makeActivePawn(0, 5)),
                 makePlayer(1, makeActivePawn(1, 13))
@@ -212,7 +212,7 @@ class LudoBugConditionTest {
     @Test
     fun `1_6 wrong kill-quiz answer attacker should move to destination`() {
         // Verify the GameEngine has answerKillQuestion
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
         val answerMethod = gameEngineClass.declaredMethods
             .find { it.name == "answerKillQuestion" }
         assertNotNull("GameEngine must have answerKillQuestion method", answerMethod)
@@ -319,7 +319,7 @@ class LudoBugConditionTest {
      */
     @Test
     fun `1_9 GameActivity setupDiceView should wire click listener to btnRollDice`() {
-        val gameActivityClass = Class.forName("com.ludokid.ui.GameActivity")
+        val gameActivityClass = Class.forName("com.ludokid.neutech.ui.GameActivity")
         val setupMethod = gameActivityClass.declaredMethods.find { it.name == "setupDiceView" }
         assertNotNull("GameActivity must have a setupDiceView method", setupMethod)
 
@@ -514,7 +514,7 @@ class LudoBugConditionTest {
      */
     @Test
     fun `1_14 DiceView animateRoll should sequence scaleDown before frame flip`() {
-        val diceViewClass = Class.forName("com.ludokid.ui.DiceView")
+        val diceViewClass = Class.forName("com.ludokid.neutech.ui.DiceView")
 
         // Verify animateRoll method exists
         val animateRollMethod = diceViewClass.declaredMethods
@@ -589,7 +589,7 @@ class LudoBugConditionTest {
      */
     @Test
     fun `1_15 TriviaCardFragment onCancel should invoke onDismissed`() {
-        val fragmentClass = Class.forName("com.ludokid.ui.TriviaCardFragment")
+        val fragmentClass = Class.forName("com.ludokid.neutech.ui.TriviaCardFragment")
 
         // Check if onCancel is overridden in TriviaCardFragment
         val onCancelMethod = try {
@@ -614,7 +614,7 @@ class LudoBugConditionTest {
      */
     @Test
     fun `1_16 LudoBoardView should have animatePawnMove method`() {
-        val boardViewClass = Class.forName("com.ludokid.ui.LudoBoardView")
+        val boardViewClass = Class.forName("com.ludokid.neutech.ui.LudoBoardView")
 
         // Check if animatePawnMove method exists
         val animateMethod = try {
@@ -651,7 +651,7 @@ class LudoBugConditionTest {
         // The fix animates binding.cardQuiz (inner MaterialCardView).
         // We verify by checking that the fragment class references cardQuiz in onViewCreated.
 
-        val fragmentClass = Class.forName("com.ludokid.ui.KillQuizFragment")
+        val fragmentClass = Class.forName("com.ludokid.neutech.ui.KillQuizFragment")
         val onViewCreatedMethod = try {
             fragmentClass.getDeclaredMethod(
                 "onViewCreated",
@@ -673,7 +673,7 @@ class LudoBugConditionTest {
         // We verify the layout has a cardQuiz ID by checking the generated R class.
         // If R.id.cardQuiz does not exist, the fix has not been applied.
         val rIdClass = try {
-            Class.forName("com.ludokid.R\$id")
+            Class.forName("com.ludokid.neutech.R\$id")
         } catch (e: ClassNotFoundException) {
             null
         }
