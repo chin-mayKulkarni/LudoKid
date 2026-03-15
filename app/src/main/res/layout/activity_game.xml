@@ -59,7 +59,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Ludo Board -->
-    <com.ludokid.ui.LudoBoardView
+    <com.ludokid.neutech.ui.LudoBoardView
         android:id="@+id/ludoBoard"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -82,7 +82,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <!-- Dice View -->
-        <com.ludokid.ui.DiceView
+        <com.ludokid.neutech.ui.DiceView
             android:id="@+id/diceView"
             android:layout_width="80dp"
             android:layout_height="80dp" />

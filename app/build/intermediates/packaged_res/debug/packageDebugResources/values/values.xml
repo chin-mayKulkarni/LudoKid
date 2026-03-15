@@ -16,9 +16,15 @@
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Ludo Kid</string>
     <string name="correct_answer">Correct! Pawn eliminated!</string>
+    <string name="gcm_defaultSenderId" translatable="false">995639181373</string>
+    <string name="google_api_key" translatable="false">AIzaSyAauFLECTWRcfrN-8P9fFDvIQBFQKTo_KE</string>
+    <string name="google_app_id" translatable="false">1:995639181373:android:536f99d71301b2c665ea54</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAauFLECTWRcfrN-8P9fFDvIQBFQKTo_KE</string>
+    <string name="google_storage_bucket" translatable="false">ludokid-neutech.firebasestorage.app</string>
     <string name="got_it">Got it!</string>
     <string name="main_menu">Main Menu</string>
     <string name="play_again">Play Again</string>
+    <string name="project_id" translatable="false">ludokid-neutech</string>
     <string name="roll_dice">Roll Dice</string>
     <string name="wrong_answer">Wrong! Opponent\'s pawn is safe!</string>
     <style name="DialogAnimation">

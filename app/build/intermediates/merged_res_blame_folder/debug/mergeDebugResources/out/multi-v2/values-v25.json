@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ludokid.app-mergeDebugResources-2:/values-v25/values-v25.xml",
+            "outputFile": "com.ludokid.neutech.app-mergeDebugResources-3:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/90a51c999f696631fde8d5aaeda487c8/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
+                    "source": "/Users/chinmaykulkarni/.gradle/caches/transforms-3/68e032beedcb5838ea361352cdd9ede5/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

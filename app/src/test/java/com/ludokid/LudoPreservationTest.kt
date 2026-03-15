@@ -1,7 +1,7 @@
-package com.ludokid
+package com.ludokid.neutech
 
-import com.ludokid.data.*
-import com.ludokid.game.LudoBoard
+import com.ludokid.neutech.data.*
+import com.ludokid.neutech.game.LudoBoard
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -60,7 +60,7 @@ class LudoPreservationTest {
     @Test
     fun `3_1 ShowTriviaCard event carries a valid non-null TriviaCard`() {
         // Verify GameEvent.ShowTriviaCard is a data class with a card field
-        val showTriviaCardClass = Class.forName("com.ludokid.game.GameEvent\$ShowTriviaCard")
+        val showTriviaCardClass = Class.forName("com.ludokid.neutech.game.GameEvent\$ShowTriviaCard")
         assertNotNull("GameEvent.ShowTriviaCard class must exist", showTriviaCardClass)
 
         // Verify it has a 'card' field of type TriviaCard
@@ -71,7 +71,7 @@ class LudoPreservationTest {
         )
         assertEquals(
             "ShowTriviaCard.card must be of type TriviaCard",
-            com.ludokid.data.TriviaCard::class.java,
+            com.ludokid.neutech.data.TriviaCard::class.java,
             cardField!!.type
         )
 
@@ -83,7 +83,7 @@ class LudoPreservationTest {
         )
 
         // Verify GameEngine.rollDice() exists and transitions to SHOWING_TRIVIA phase
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
         val rollDiceMethod = gameEngineClass.declaredMethods.find { it.name == "rollDice" }
         assertNotNull("GameEngine must have rollDice() method", rollDiceMethod)
 
@@ -131,7 +131,7 @@ class LudoPreservationTest {
         )
 
         // Verify the kill-quiz flow is triggered via GameEvent.ShowKillQuiz
-        val showKillQuizClass = Class.forName("com.ludokid.game.GameEvent\$ShowKillQuiz")
+        val showKillQuizClass = Class.forName("com.ludokid.neutech.game.GameEvent\$ShowKillQuiz")
         assertNotNull("GameEvent.ShowKillQuiz must exist for kill-quiz flow", showKillQuizClass)
 
         val pendingKillField = showKillQuizClass.declaredFields.find { it.name == "pendingKill" }
@@ -154,7 +154,7 @@ class LudoPreservationTest {
     @Test
     fun `3_3 correct kill-quiz answer sends defending pawn HOME`() {
         // Verify GameEngine.killPawn (private) exists — it resets defending pawn to HOME
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
         val killPawnMethod = gameEngineClass.declaredMethods.find { it.name == "killPawn" }
         assertNotNull(
             "GameEngine must have killPawn() method that resets defending pawn to HOME",
@@ -166,7 +166,7 @@ class LudoPreservationTest {
         assertNotNull("PawnState.HOME must exist", homeState)
 
         // Verify GameEvent.PawnKilled exists (emitted after correct answer)
-        val pawnKilledClass = Class.forName("com.ludokid.game.GameEvent\$PawnKilled")
+        val pawnKilledClass = Class.forName("com.ludokid.neutech.game.GameEvent\$PawnKilled")
         assertNotNull("GameEvent.PawnKilled must exist", pawnKilledClass)
 
         // Simulate the killPawn logic: defending pawn should be reset to HOME
@@ -181,7 +181,7 @@ class LudoPreservationTest {
         assertEquals("Killed pawn state must be HOME", PawnState.HOME, killedPawn.state)
 
         // Verify PendingKill data class structure
-        val pendingKillClass = Class.forName("com.ludokid.data.PendingKill")
+        val pendingKillClass = Class.forName("com.ludokid.neutech.data.PendingKill")
         val attackingPawnField = pendingKillClass.declaredFields.find { it.name == "attackingPawn" }
         val defendingPawnField = pendingKillClass.declaredFields.find { it.name == "defendingPawn" }
         assertNotNull("PendingKill must have attackingPawn field", attackingPawnField)
@@ -202,7 +202,7 @@ class LudoPreservationTest {
     @Test
     fun `3_4 rolling 6 with consecutiveSixes less than 2 grants bonus turn`() {
         // Verify GameEvent.BonusTurn exists
-        val bonusTurnClass = Class.forName("com.ludokid.game.GameEvent\$BonusTurn")
+        val bonusTurnClass = Class.forName("com.ludokid.neutech.game.GameEvent\$BonusTurn")
         assertNotNull("GameEvent.BonusTurn must exist", bonusTurnClass)
 
         val playerField = bonusTurnClass.declaredFields.find { it.name == "player" }
@@ -241,7 +241,7 @@ class LudoPreservationTest {
         )
 
         // Verify processEndOfTurn exists in GameEngine
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
         val processEndOfTurnMethod = gameEngineClass.declaredMethods
             .find { it.name == "processEndOfTurn" }
         assertNotNull("GameEngine must have processEndOfTurn method", processEndOfTurnMethod)
@@ -391,7 +391,7 @@ class LudoPreservationTest {
         )
 
         // Verify GameEvent.GameOver exists
-        val gameOverClass = Class.forName("com.ludokid.game.GameEvent\$GameOver")
+        val gameOverClass = Class.forName("com.ludokid.neutech.game.GameEvent\$GameOver")
         assertNotNull("GameEvent.GameOver must exist", gameOverClass)
         val winnerField = gameOverClass.declaredFields.find { it.name == "winner" }
         assertNotNull("GameEvent.GameOver must carry a winner field", winnerField)
@@ -510,11 +510,11 @@ class LudoPreservationTest {
     @Test
     fun `3_10 no moveable pawns emits NoMoveablePawns event and advances turn`() {
         // Verify GameEvent.NoMoveablePawns exists
-        val noMoveablePawnsClass = Class.forName("com.ludokid.game.GameEvent\$NoMoveablePawns")
+        val noMoveablePawnsClass = Class.forName("com.ludokid.neutech.game.GameEvent\$NoMoveablePawns")
         assertNotNull("GameEvent.NoMoveablePawns must exist", noMoveablePawnsClass)
 
         // Verify GameEvent.NextTurn exists (emitted after skipping)
-        val nextTurnClass = Class.forName("com.ludokid.game.GameEvent\$NextTurn")
+        val nextTurnClass = Class.forName("com.ludokid.neutech.game.GameEvent\$NextTurn")
         assertNotNull("GameEvent.NextTurn must exist", nextTurnClass)
 
         // Scenario: all pawns HOME, dice = 1 → no moveable pawns
@@ -550,7 +550,7 @@ class LudoPreservationTest {
         )
 
         // Verify rollDice() in GameEngine handles empty moveablePawns by emitting NoMoveablePawns
-        val gameEngineClass = Class.forName("com.ludokid.game.GameEngine")
+        val gameEngineClass = Class.forName("com.ludokid.neutech.game.GameEngine")
         val rollDiceMethod = gameEngineClass.declaredMethods.find { it.name == "rollDice" }
         assertNotNull("GameEngine.rollDice() must exist", rollDiceMethod)
     }
@@ -567,7 +567,7 @@ class LudoPreservationTest {
      */
     @Test
     fun `3_11 TriviaCardFragment auto-dismisses after 8 seconds via timer`() {
-        val fragmentClass = Class.forName("com.ludokid.ui.TriviaCardFragment")
+        val fragmentClass = Class.forName("com.ludokid.neutech.ui.TriviaCardFragment")
 
         // Verify AUTO_DISMISS_MS constant is 8000L
         val autoDismissField = fragmentClass.declaredFields.find { it.name == "AUTO_DISMISS_MS" }
@@ -579,7 +579,7 @@ class LudoPreservationTest {
         // Note: Kotlin companion object constants are stored differently; check via reflection
         // The field may be on the companion object class
         val companionClass = try {
-            Class.forName("com.ludokid.ui.TriviaCardFragment\$Companion")
+            Class.forName("com.ludokid.neutech.ui.TriviaCardFragment\$Companion")
         } catch (e: ClassNotFoundException) { null }
 
         // Verify dismissAndNotify method exists (called by timer onFinish)
@@ -627,7 +627,7 @@ class LudoPreservationTest {
      */
     @Test
     fun `3_12 kill-quiz timer expiry calls handleAnswer with -1 treating it as wrong answer`() {
-        val fragmentClass = Class.forName("com.ludokid.ui.KillQuizFragment")
+        val fragmentClass = Class.forName("com.ludokid.neutech.ui.KillQuizFragment")
 
         // Verify handleAnswer method exists
         val handleAnswerMethod = fragmentClass.declaredMethods
